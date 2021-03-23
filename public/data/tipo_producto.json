@@ -1,0 +1,39 @@
+[
+  {
+    "categoriaproducto": "Mejoradores de Suelo",
+      "productos": [
+          "Composta",
+          "Bokashi"
+      ]
+  },
+  {
+      "categoriaproducto": "Nutrición Vegetal",
+      "productos": [
+          "Bioles tipo Magro o supermagro",
+          "Microorganismos de Montaña fase liquida",
+          "Microorganismo de Montaña (MM)",
+          "Lixiviado de Lombriz",
+          "Humus de lombriz",
+          "Enraizadores a base de lentejas",
+          "Fitohormonas orgánicas a base de agua de coco ",
+          "Composta",
+          "Bokashi"
+      ]
+  },
+  {
+      "categoriaproducto": "Manejo Fitosanitario",
+      "productos": [
+          "Caldo Minerales (Bordelés, sulfocalcico, Cenizas, agua de vidrio)",
+          "Fermento de Tabaco",
+          "Purín de Sábila",
+          "Infusión de Ruda",
+          "Repelentes",
+          "Extracto de Cebolla",
+          "Extracto de ajo",
+          "Extracto de ajo y Chile",
+          "Extracto de Neem",
+          "Extracto de Cempasúchil",
+          "Extracto de Yuca"
+    ]
+  }
+]
