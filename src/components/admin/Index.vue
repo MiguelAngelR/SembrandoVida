@@ -190,7 +190,7 @@
 </template>
 
 <script>
-  /*global $*/
+  /*global $ ejemplo*/
   export default {
     name: 'PerfilAdminDataTable',
     data: () => ({
