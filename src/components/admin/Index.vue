@@ -190,7 +190,7 @@
 </template>
 
 <script>
-  /*global $ ejemplo*/
+  /*global $ ejemplo  se añade esta nueva linea de codigo al comentario */
   export default {
     name: 'PerfilAdminDataTable',
     data: () => ({
