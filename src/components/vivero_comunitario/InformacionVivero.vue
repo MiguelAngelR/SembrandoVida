@@ -16,55 +16,55 @@
                   <v-subheader>1.1 Nombre del Vivero</v-subheader>
                 </v-col>
                 <v-col cols="12" md="4">
-                  <v-text-field outlined dense></v-text-field>
+                  <h4 id="nombre_vivero">El paraíso del campo</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.2 Territorio</v-subheader>
                 </v-col>
                 <v-col cols="12" md="4">
-                  <v-text-field outlined dense></v-text-field>
+                  <h4 id="territorio">Papantla</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.3 Representante del Vivero</v-subheader>
                 </v-col>
                 <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-select :items="beneficiarios" outlined dense></v-select>
+                  <v-select id="vselectBeneficiarios" :items="beneficiarios" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.2.1 Estado</v-subheader>
                 </v-col>
-                <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                <v-col cols="12" md="4" >
+                  <h4 id="estado">Veracruz</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.4 Nombre del Técnico Productivo</v-subheader>
                 </v-col>
-                <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                <v-col cols="12" md="4">
+                  <h4 id="nombreTecnicoProductivo">Juan José Rodriguez García</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.2.2 Municipio</v-subheader>
                 </v-col>
-                <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                <v-col cols="12" md="4">
+                  <h4 id="municipio">Papantla</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.4.1 Nombre del Técnico Social</v-subheader>
                 </v-col>
-                <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                <v-col cols="12" md="4">
+                  <h4 id="nombreTecnicoSocial">Rosa del Carmen Perez Lopez</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.2.3 Localidad</v-subheader>
                 </v-col>
-                <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                <v-col cols="12" md="4">
+                  <h4 id="localidad">Papantla</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.5 Nombre del Facilitador</v-subheader>
                 </v-col>
-                <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                <v-col cols="12" md="4">
+                  <h4 id="nombreFacilitador">Juan Ricardo Solis Vergara</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.2.4 Calle/Av./Predio</v-subheader>
@@ -83,7 +83,7 @@
                   ></v-text-field>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
-                  <v-subheader>1.2.5 Número</v-subheader>
+                  <v-subheader>1.2.5 Número externo</v-subheader>
                 </v-col>
                 <v-col cols="12" md="1" class="ma-0 pa-0">
                   <v-text-field outlined dense></v-text-field>
@@ -94,29 +94,24 @@
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-text-field outlined dense></v-text-field>
                 </v-col>
-                <v-col cols="12" md="3" class="ma-0 pa-0">
-                  <v-subheader>1.6.1 Coordenadas (Latitud)</v-subheader>
+                <v-col cols="12" md="2" class="ma-0 pa-0">
+                  <v-subheader>1.6.1 Coordenadas</v-subheader>
                 </v-col>
-                <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-text-field label="Grados" outlined dense></v-text-field>
+                <v-col cols="12" md="4" class="ma-0 pa-0">
+                  <v-text-field 
+                    id="coordenadaLatitud"
+                    v-model="editedItem"
+                    label="Latitud"
+                    outlined dense>
+                  </v-text-field>
                 </v-col>
-                <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-text-field label="Minutos" outlined dense></v-text-field>
-                </v-col>
-                <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-text-field label="Segundos" outlined dense></v-text-field>
-                </v-col>
-                <v-col cols="12" md="3" class="ma-0 pa-0">
-                  <v-subheader>1.6.2 Coordenadas (Longitud)</v-subheader>
-                </v-col>
-                <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-text-field label="Grados" outlined dense></v-text-field>
-                </v-col>
-                <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-text-field label="Minutos" outlined dense></v-text-field>
-                </v-col>
-                <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-text-field label="Segundos" outlined dense></v-text-field>
+                <v-col cols="12" md="4" class="ma-0 pa-0">
+                  <v-text-field 
+                    id="coordenadaLongitud"
+                    v-model="editedItem"
+                    label="Longitud" 
+                    outlined dense>
+                    </v-text-field>
                 </v-col>
               </v-row>
             </v-container>
@@ -144,49 +139,48 @@
           <v-form>
             <v-container grid-list-md>
               <v-row>
-                <v-col cols="12" md="3">
+                <v-col cols="12" md="3" class="ma-0 pa-0">
                   <v-subheader>2.1 Número de CAC's Pertenecientes</v-subheader>
                 </v-col>
                 <v-col cols="12" md="1">
-                  <v-text-field outlined dense></v-text-field>
+                  <h4 id="numeroCac">1</h4>
                 </v-col>
-                <v-col cols="12" md="2">
+                <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>2.2 Nombre de la CAC</v-subheader>
                 </v-col>
                 <v-col cols="12" md="2">
-                  <v-text-field outlined dense></v-text-field>
+                  <h4 id="nombreCac">El Sol de México</h4>
                 </v-col>
-                <v-col cols="12" md="2">
+                <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>2.2.1 Clave de CAC</v-subheader>
                 </v-col>
                 <v-col cols="12" md="2">
-                  <v-text-field outlined dense></v-text-field>
+                  <h4 id="claveCac">TE-123-CALS-21-ACA</h4>
                 </v-col>
                 <v-col cols="12" md="3" class="ma-0 pa-0">
                   <v-subheader
-                    >2.3 Número de Integrantes del Vivero</v-subheader
-                  >
+                    >2.3 Número de Integrantes del Vivero</v-subheader>
                 </v-col>
-                <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                <v-col cols="12" md="1" >
+                  <h4 id="integrantesVivero">25</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>2.3.1 No. de Mujeres</v-subheader>
                 </v-col>
-                <v-col cols="12" md="2" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                <v-col cols="12" md="2" >
+                  <h4 id="numeroMujeres">15</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>2.3.2 No. de Hombres</v-subheader>
                 </v-col>
-                <v-col cols="12" md="2" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                <v-col cols="12" md="2">
+                  <h4 id="numeroHombres">10</h4>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>2.4 Estatus del Vivero</v-subheader>
                 </v-col>
                 <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-select :items="estatusvive" outlined dense></v-select>
+                  <v-select id="estatusVivero" :items="estatusvive" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader
@@ -194,7 +188,7 @@
                   >
                 </v-col>
                 <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-select :items="contruivivero" outlined dense></v-select>
+                  <v-select id="viveroConstruido" :items="contruivivero" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="7" class="ma-0 pa-0">
                   <v-subheader
@@ -203,7 +197,7 @@
                   >
                 </v-col>
                 <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-select :items="yesonot" outlined dense></v-select>
+                  <v-select id="bodegaVivero" :items="yesonot" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="8" class="ma-0 pa-0">
                   <v-subheader
@@ -213,19 +207,19 @@
                   </v-subheader>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
-                  <v-select :items="yesonot" outlined dense></v-select>
+                  <v-select id="bitacoraVivero" :items="yesonot" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="3" class="ma-0 pa-0">
                   <v-subheader>2.7 ¿Cuenta con energía electrica?</v-subheader>
                 </v-col>
                 <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-select :items="yesonot" outlined dense></v-select>
+                  <v-select id="energiaElectrica" :items="yesonot" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="3" class="ma-0 pa-0">
                   <v-subheader>2.8 Tipo de acceso al vivero</v-subheader>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
-                  <v-select :items="accesopav" outlined dense></v-select>
+                  <v-select id="accesoVivero" :items="accesopav" outlined dense></v-select>
                 </v-col>
                  <v-col cols="12" md="12" class="ma-0 pa-0">
                   <v-subheader
@@ -263,17 +257,15 @@
                 <v-col cols="12" md="4">
                   <v-subheader
                     >3.1 Fuente de abastecimiento de Agua
-                    (Primario)</v-subheader
-                  >
+                    (Primario)</v-subheader>
                 </v-col>
                 <v-col cols="12" md="2">
-                  <v-select :items="abastedeagua" outlined dense></v-select>
+                  <v-select id="abastecimientoAgua" :items="abastedeagua" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="4">
                   <v-subheader
                     >3.1.1 Fuente de abastecimiento de Agua
-                    (Secundario)</v-subheader
-                  >
+                    (Secundario)</v-subheader>
                 </v-col>
                 <v-col cols="12" md="2">
                   <v-select :items="abastedeagua" outlined dense></v-select>
@@ -281,8 +273,7 @@
                 <v-col cols="12" md="4" class="ma-0 pa-0">
                   <v-subheader
                     >3.1.2 Fuente de abastecimiento de Agua
-                    (Terciario)</v-subheader
-                  >
+                    (Terciario)</v-subheader>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-select :items="abastedeagua" outlined dense></v-select>
@@ -536,10 +527,7 @@ export default {
     loading4: false,
     estatusvive: ['En construcción', 'Establecido', 'Con Producción de Planta','Reubicación','Siniestrado'],
     contruivivero: [
-      "Proporcionados por Bienestar",
-      "Aportación de la CAC",
-      "Ambos",
-    ],
+      'Proporcionados por Bienestar','Aportación de la CAC','Materiales de la Región','Ambos'],
     yesonot: ["Si", "No"],
     accesopav: ["Pavimiento", "Terraceria"],
     beneficiarios: [
