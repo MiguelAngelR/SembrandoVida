@@ -70,7 +70,7 @@
                   <v-subheader>1.2.4 Calle/Av./Predio</v-subheader>
                 </v-col>
                 <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                  <v-text-field id="calleAvenida" outlined dense></v-text-field>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.6 Superficie del Vivero</v-subheader>
@@ -78,6 +78,7 @@
                 <v-col cols="12" md="3" class="ma-0 pa-0">
                   <v-text-field
                     outlined
+                    id="superficieVivero"
                     dense
                     placeholder="(Ha.)"
                   ></v-text-field>
@@ -86,13 +87,13 @@
                   <v-subheader>1.2.5 Número externo</v-subheader>
                 </v-col>
                 <v-col cols="12" md="1" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                  <v-text-field id="numeroExterno" outlined dense></v-text-field>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.2.6 C.P.</v-subheader>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
-                  <v-text-field outlined dense></v-text-field>
+                  <v-text-field id="cpostal" outlined dense></v-text-field>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
                   <v-subheader>1.6.1 Coordenadas</v-subheader>
@@ -268,7 +269,7 @@
                     (Secundario)</v-subheader>
                 </v-col>
                 <v-col cols="12" md="2">
-                  <v-select :items="abastedeagua" outlined dense></v-select>
+                  <v-select id="abastecimientoagua2" :items="abastedeagua" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="4" class="ma-0 pa-0">
                   <v-subheader
@@ -276,19 +277,19 @@
                     (Terciario)</v-subheader>
                 </v-col>
                 <v-col cols="12" md="2" class="ma-0 pa-0">
-                  <v-select :items="abastedeagua" outlined dense></v-select>
+                  <v-select id="abastecimientoAgua3" :items="abastedeagua" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="3" class="ma-0 pa-0">
                   <v-subheader>3.2 Estatus del sistema de riego</v-subheader>
                 </v-col>
                 <v-col cols="12" md="3" class="ma-0 pa-0">
-                  <v-select :items="estatusriego" outlined dense></v-select>
+                  <v-select id="estatusSistemaRiego" :items="estatusriego" outlined dense></v-select>
                 </v-col>
                 <v-col cols="12" md="3" class="ma-0 pa-0">
                   <v-subheader>3.3 Tipo de sistema de riego</v-subheader>
                 </v-col>
                 <v-col cols="12" md="4" class="ma-0 pa-0">
-                  <v-select :items="tiporiego" outlined dense></v-select>
+                  <v-select id="tipoSistemaRiego" :items="tiporiego" outlined dense></v-select>
                 </v-col>
               </v-row>
             </v-container>
@@ -361,6 +362,7 @@
                             <v-col cols="12" sm="4" class="mb-2">
                               <p>CAC</p>
                               <v-combobox
+                                id="cac"
                                 v-model="asignacionEditada.cac"
                                 :items="menuEdicion.cac"
                                 clearable
@@ -370,6 +372,7 @@
                             <v-col cols="12" sm="2" class="mb-2">
                               <p>Categoría planta</p>
                               <v-combobox
+                                id="categoriaPlanta"
                                 v-model="asignacionEditada.catPlanta"
                                 :items="categoriaMenu"
                                 clearable
@@ -379,6 +382,7 @@
                             <v-col cols="12" sm="6" class="mb-2">
                               <p>Especie</p>
                               <v-combobox
+                                id="especie"
                                 v-model="asignacionEditada.especie"
                                 :items="especieMenu"
                                 clearable
@@ -387,6 +391,7 @@
                             <v-col cols="12" sm="2" class="mb-2">
                               <p>Planta en Semillero</p>
                               <v-text-field
+                                id="cantidadSemillero"
                                 v-model="asignacionEditada.cantisemille"
                                 :items="menuEdicion.cantisemille"
                                 type="number"
@@ -396,6 +401,7 @@
                             <v-col cols="12" sm="2" class="mb-2">
                               <p>Planta en Desarrollo</p>
                               <v-text-field
+                                id="cantidadDesarrollo"
                                 v-model="asignacionEditada.cantidesarro"
                                 :items="menuEdicion.cantidesarro"
                                 type="number"
@@ -405,6 +411,7 @@
                             <v-col cols="12" sm="2" class="mb-2">
                               <p>Planta Lista para Extraer</p>
                               <v-text-field
+                                id="cantidadListaExtraer"
                                 v-model="asignacionEditada.cantidadlistext"
                                 :items="menuEdicion.cantidadlistext"
                                 type="number"
